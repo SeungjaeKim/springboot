@@ -9,7 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -40,6 +40,7 @@ public class PostsRepositoryTest {
 
         //then
         Posts post = postList.get(0);
+        assertThat(post.getTitle()).isEqualTo(title);
 
 
     }
