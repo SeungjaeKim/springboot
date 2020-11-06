@@ -1,6 +1,7 @@
 package co.kr.springboot.domain.posts;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class PostsRepositoryTest {
 
@@ -24,7 +24,8 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void 게시글저장_불러오기(){
+    @DisplayName("게시글저장 불러오기")
+    public void postInsertAndGetList(){
 
         String title = "테스트 게시글";
         String content = "테스트 본문";
