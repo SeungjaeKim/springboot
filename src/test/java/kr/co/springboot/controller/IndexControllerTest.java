@@ -1,5 +1,6 @@
 package kr.co.springboot.controller;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +16,7 @@ class IndexControllerTest {
     private TestRestTemplate restTemplate;
     
     @Test
+    @DisplayName("메인페이지_로딩")
     public void mainpageLoding(){
         //when 
         String body = this.restTemplate.getForObject("/", String.class);
